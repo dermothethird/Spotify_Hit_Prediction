@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# add DS_Store
+.DS_Store
+
+#Ignore Data
+Data/songs.csv

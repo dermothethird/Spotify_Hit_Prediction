@@ -84,7 +84,7 @@ With a final precision score of 90% on unseen data, we can say that our model is
 
 ### Limitations
 With any project comes it's limitations:
-* **Not enough data**: After data preparation, I had just over 66,000 rows (songs) in my final dataset. If you recall, 60,000 songs are uploaded daily to Spotify's platform, and there are over 90 million songs on the platform [currently.](https://newsroom.spotify.com/company-info/#:~:text=Discover%2C%20manage%20and%20share%20over,ad%2Dfree%20music%20listening%20experience.) The use of more data can reduce overfitting and better represent Spotify's database. 
+* **Not enough data**: After data preparation, I had just over 66,000 rows (songs) in my final dataset. If you recall, 60,000 songs are uploaded daily to Spotify's platform, and there are over 80 million songs on the platform [currently.](https://newsroom.spotify.com/company-info/#:~:text=Discover%2C%20manage%20and%20share%20over,ad%2Dfree%20music%20listening%20experience.) The use of more data can reduce overfitting and better represent Spotify's database. 
 * **Features not accounted for have a large impact on song popularity**: Although this analysis only focused on audio features, we can't deny that other factors such as artist popularity, date released, and whether or not they have partnerships with Spotify have massive impacts on song popularity. We can't do anything about this, but it is important to note.
 * **High precision but low recall**: We know that recall and precision inversely affect each other; however, in the future we may want to try to maintain a high precision score without sacrificing too much from precision, thereby increasing accuracy and f1 scores in tandem.
 

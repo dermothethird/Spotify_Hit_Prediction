@@ -46,7 +46,7 @@ Let's also drop inutile columns:
 * Non-numeric columns to drop: `type`, `id`, `uri`, `track_href`, `analysis_url`
 
 ### Data Analysis Visualization
-![graph1](./Visuals/Audoio_Features_Radar_Chart.png)
+![graph1](./Visuals/NT_Audio_Features_Radar_Chart.png)
 
 ## IV. Data Modeling
 Now that our data is clean, it's time for modeling. Since I will want to know which features are most impacting the models predictions, I am going to use tree-based models. This will allow me to pull feature importances later on.
@@ -63,18 +63,18 @@ Recall = True positives / (True positives + False negatives)
 If we classified a song as a non-hit, but then it becomes a hit (false negative), we're not losing much monetarily given we never actually invested time/resources into that song/artist. On the other hand, if we predict a song is a hit and it ends up being a flop (false positive) we have now lost a lot of time and money on a dud. The later scenario is one that we want to minimize, which is why we are focusing on precision.
 
 ## V. Results
-![graph1](./Visuals/Feature_Importance_BarChart.png)
+![graph1](./Visuals/NT_Feature_Importance_BarChart.png)
 
 Our XGBoost model gave us a precision score of 90% on unseen data. Compared to our cross validation score of 92% on the same model, we can conclude that the model is slightly overfit but not in a concerning way. Also, since were trying to maximize precision, our model is predicting very little False Positives and instead is playing it safe and predicting more False Negatives. This is ok for now, but we may want to address this in the future. The top 3 contributors to the model's predictions, as seen on the bar chart above, are Loudness, Danceability, and Valence. This is supported by the radar chart shown in the Data Analsysis Vizualization section.
 
 ### True Positive Example
-![graph1](./Visuals/TruePositive_Radar_Chart.png)
+![graph1](./Visuals/NT_TruePositive_Radar_Chart.png)
 
 ### True Negative Example
-![graph1](./Visuals/TrueNegative_Radar_Chart.png)
+![graph1](./Visuals/NT_TrueNegative_Radar_Chart.png)
 
 ### False Positive Example
-![graph1](./Visuals/FalsePositive_Radar_Chart.png)
+![graph1](./Visuals/NT_FalsePositive_Radar_Chart.png)
 
 ## VI. Evaluation
 With a final precision score of 90% on unseen data, we can say that our model is doing a very good job at minimizing the amount of incorrect songs it classifies as a hit. To reiterate, this is very important since Spotify wants to be sure that a song they classify as a hit - and therefore put time and money into supporting - actually has potential to be a hit and not a flop.
